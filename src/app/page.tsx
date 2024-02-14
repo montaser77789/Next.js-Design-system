@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen p-24">
-        <div className="flex items-center space-x-2 border-2 border-white p-5">
+        <div className="flex items-center space-x-2  border-2 border-white p-5">
           <Button intent={"primary"} size={"xs"}>
             Primary
           </Button>
@@ -17,9 +17,9 @@ export default function Home() {
             DESTRUCTIVE
           </Button>
           <Button size={"lg"}>SECONDARY</Button>
-          {/* <Button>GHOST</Button>
-          <Button>LINK</Button> */}
         </div>
+        <Button fullWidth size={"lg"}>SECONDARY</Button>
+
       </main>
     </>
   );
