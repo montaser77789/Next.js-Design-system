@@ -7,10 +7,10 @@ const buttonVarients = cva(
   {
     variants: {
       intent: {
-        primary: " bg-indigo-700 text-white dark:bg-white dark:text-black ",
+        primary: " bg-primary ",
         outline:
           "bg-transparent text-black  dark:text-white border border-gray-300",
-        destructive: "bg-red-600 text-black dark:text-white dark:bg-red-800  ",
+        destructive: "bg-destructive text-black dark:text-white   ",
       },
       size: {
         xs: "px-2 text-xs h-6",
@@ -36,11 +36,18 @@ interface Ipropse
   children: ReactNode;
   className?: string;
 }
-function Button({ children, className, size,fullWidth, intent, ...rest }: Ipropse) {
+function Button({
+  children,
+  className,
+  size,
+  fullWidth,
+  intent,
+  ...rest
+}: Ipropse) {
   return (
     <>
       <button
-        className={tailsindCMerge(buttonVarients({ intent, size,fullWidth }))}
+        className={tailsindCMerge(buttonVarients({ intent, size, fullWidth }))}
         {...rest}
       >
         {children}

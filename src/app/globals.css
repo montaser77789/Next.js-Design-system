@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -17,5 +17,19 @@
     --background-end-rgb: 0, 0, 0;
     --defult-brand: 249.62, 56.3%, 64.7%;
   }
-}
+} */
 
+@layer base {
+  :root {
+    --forground: 240 10% 3.93;
+    --defult-brand: 270, 56.3%, 64.7%;
+    --defult-destructive: 41 100% 50%
+  }
+
+  .dark {
+    --forground: 0 0% 75.91;
+
+    --defult-brand: 249.62, 56.3%, 64.7%;
+    --defult-destructive: 0 100% 50%
+  }
+}

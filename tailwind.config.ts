@@ -14,6 +14,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--defult-brand))",
           foreground: "red",
         },
+        destructive: {
+          DEFAULT: "hsl(var(--defult-destructive))",
+          foreground:  "hsl(var(--defult-destructive))",
+        },
       },
     },
   },
