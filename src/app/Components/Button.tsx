@@ -7,7 +7,7 @@ const buttonVarients = cva(
   {
     variants: {
       intent: {
-        primary: " bg-black text-white black:bg-white black:text-black ",
+        primary: " bg-indigo-700 text-white dark:bg-white dark:text-black ",
         outline:
           "bg-transparent text-black  dark:text-white border border-gray-300",
         destructive: "bg-red-600 text-black dark:text-white dark:bg-red-800  ",
