@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { tailsindCMerge } from "@/Utils";
 
-const buttonVarients = cva(" block duration-200  rounded-md font-semibold", {
+const buttonVarients = cva(" inline-flex items-center  duration-200  rounded-md ", {
   variants: {
     intent: {
       primary: " bg-black text-white black:bg-white black:text-black ",
@@ -11,9 +11,17 @@ const buttonVarients = cva(" block duration-200  rounded-md font-semibold", {
       destructive:
         "bg-red-600 text-black dark:text-white dark:bg-red-800  border border-gray-30",
     },
+    size: {
+      xs: "px-2 text-xs h-6",
+      sm: "px-6 text-sm h-8",
+      base: "px-4 text-base h-10",
+      lg: "px-6 text-lg h-12",
+    },
   },
+
   defaultVariants: {
     intent: "primary",
+    size: "base",
   },
 });
 
@@ -23,10 +31,13 @@ interface Ipropse
   children: ReactNode;
   className?: string;
 }
-function Button({ children, className, intent, ...rest }: Ipropse) {
+function Button({ children, className, size, intent, ...rest }: Ipropse) {
   return (
     <>
-      <button className={tailsindCMerge(buttonVarients({ intent }))} {...rest}>
+      <button
+        className={tailsindCMerge(buttonVarients({ intent, size }))}
+        {...rest}
+      >
         {children}
       </button>
     </>
