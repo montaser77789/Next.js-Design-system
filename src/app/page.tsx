@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <main className="min-h-screen p-24">
         <ThemeChanger />
-        <div className="flex items-center space-x-2  border-2 border-white p-5">
+        <div className="flex items-center flex-wrap justify-center space-x-2  border-2 border-white p-5 mb-2">
           <Button intent={"primary"} size={"xs"}>
             Primary
           </Button>
@@ -14,13 +14,16 @@ export default function Home() {
             {" "}
             OUTLINE
           </Button>
-          <Button intent={"destructive"} size={"base"}>
+          <Button rounded={"full"} intent={"destructive"} size={"base"}>
             DESTRUCTIVE
           </Button>
-          <Button size={"lg"}>SECONDARY</Button>
+          <Button rounded={"2xl"} size={"lg"}>
+            SECONDARY
+          </Button>
         </div>
-        <Button fullWidth size={"lg"}>SECONDARY</Button>
-
+        <Button fullWidth size={"lg"}>
+          SECONDARY
+        </Button>
       </main>
     </>
   );

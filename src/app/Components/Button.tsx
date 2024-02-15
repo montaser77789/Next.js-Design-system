@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { tailsindCMerge } from "@/Utils";
 
 const buttonVarients = cva(
-  " inline-flex items-center  duration-200  rounded-md ",
+  " inline-flex items-center  duration-200 justify-center",
   {
     variants: {
       intent: {
@@ -19,13 +19,23 @@ const buttonVarients = cva(
         lg: "px-6 text-lg h-12",
       },
       fullWidth: {
-        true: "w-full justify-center",
+        true: "w-full ",
+      },
+      rounded: {
+        none: "rounded-none",
+        sm: "rounded-sm	",
+        md: "rounded-md	",
+        lg: "rounded-lg	",
+        xl: "rounded-xl	",
+        "2xl": "rounded-2xl	",
+        full: "rounded-full	",
       },
     },
 
     defaultVariants: {
       intent: "primary",
       size: "base",
+      rounded: "md",
     },
   }
 );
@@ -42,12 +52,15 @@ function Button({
   size,
   fullWidth,
   intent,
+  rounded,
   ...rest
 }: Ipropse) {
   return (
     <>
       <button
-        className={tailsindCMerge(buttonVarients({ intent, size, fullWidth }))}
+        className={tailsindCMerge(
+          buttonVarients({ intent, size, rounded, fullWidth })
+        )}
         {...rest}
       >
         {children}
